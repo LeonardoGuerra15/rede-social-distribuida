@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  backend1:
+    build:
+      context: ./backend-python
+      dockerfile: ../docker/backend-python.Dockerfile
+    ports:
+      - "5000:5000"
+
+  backend2:
+    build:
+      context: ./backend-python
+      dockerfile: ../docker/backend-python.Dockerfile
+    ports:
+      - "5001:5000"
+
+  backend3:
+    build:
+      context: ./backend-python
+      dockerfile: ../docker/backend-python.Dockerfile
+    ports:
+      - "5002:5000"
+
+  mensagens:
+    build:
+      context: ./mensagens-node
+      dockerfile: ../docker/mensagens-node.Dockerfile
+    ports:
+      - "3000:3000"
+
+  sincronizacao:
+    build:
+      context: ./sincronizacao-go
+      dockerfile: ../docker/sincronizacao-go.Dockerfile
+    ports:
+      - "8080:8080"
+
+  replicacao:
+    build:
+      context: ./replicacao
+      dockerfile: ../docker/replicacao.Dockerfile
+    depends_on:
+      - backend1
+      - backend2
+      - backend3
