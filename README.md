@@ -125,7 +125,7 @@ graph TD
   PostService2[Servidor 2 (Python)]
   MessageService[Serviço de Mensagens (Node.js)]
   SyncService[Sincornizador de Relógios (Go)]
-```
+
 
   User1 -->|POST/seguir| PostService1
   User2 -->|POST/postar| PostService2
@@ -135,6 +135,7 @@ graph TD
   SyncService --> PostService1
   SyncService --> PostService2
   PostService1 <--> PostService2
+```
 
 
 
