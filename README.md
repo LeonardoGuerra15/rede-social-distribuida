@@ -115,7 +115,9 @@ docker-compose up --build
 
 
 ## Diagrama de Arquitetura
-![ChatGPT Image 23 de mai  de 2025, 12_24_18](https://github.com/user-attachments/assets/05644902-2874-49e0-acdb-f4884b0a52c8)
+
+<img src="https://github.com/user-attachments/assets/c24de5a7-0d50-42dc-b808-2127c3522cab" width="500"/>
+
 ```plaintext
 graph TD
   User1[Usuário 1]
