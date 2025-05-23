@@ -116,6 +116,7 @@ docker-compose up --build
 
 ## Diagrama de Arquitetura
 ![ChatGPT Image 23 de mai  de 2025, 12_24_18](https://github.com/user-attachments/assets/05644902-2874-49e0-acdb-f4884b0a52c8)
+```plaintext
 graph TD
   User1[Usuário 1]
   User2[Usuário 2]
@@ -124,6 +125,7 @@ graph TD
   PostService2[Servidor 2 (Python)]
   MessageService[Serviço de Mensagens (Node.js)]
   SyncService[Sincornizador de Relógios (Go)]
+```
 
   User1 -->|POST/seguir| PostService1
   User2 -->|POST/postar| PostService2
