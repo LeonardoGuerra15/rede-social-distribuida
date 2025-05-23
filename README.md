@@ -115,7 +115,26 @@ docker-compose up --build
 
 
 ## Diagrama de Arquitetura
-### {INSERIR}
+![ChatGPT Image 23 de mai  de 2025, 12_24_18](https://github.com/user-attachments/assets/05644902-2874-49e0-acdb-f4884b0a52c8)
+graph TD
+  User1[Usuário 1]
+  User2[Usuário 2]
+  User3[Usuário 3]
+  PostService1[Servidor 1 (Python)]
+  PostService2[Servidor 2 (Python)]
+  MessageService[Serviço de Mensagens (Node.js)]
+  SyncService[Sincornizador de Relógios (Go)]
+
+  User1 -->|POST/seguir| PostService1
+  User2 -->|POST/postar| PostService2
+  User3 -->|POST/enviar| MessageService
+  PostService1 -->|GET/Berkeley| SyncService
+  PostService2 -->|Relogio_logico| SyncService
+  SyncService --> PostService1
+  SyncService --> PostService2
+  PostService1 <--> PostService2
+
+
 
 ## Considerações Finais
 Este projeto visa aplicar conceitos fundamentais de sistemas distribuídos na prática, abordando:
